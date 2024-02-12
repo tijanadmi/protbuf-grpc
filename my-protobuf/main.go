@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
-	"my-protobuf/jobsearch"
+	"my-protobuf/basic"
 	"time"
 )
 
@@ -11,7 +11,7 @@ type logWriter struct {
 }
 
 func (writer logWriter) Write(bytes []byte) (int, error) {
-	return fmt.Print(time.Now().Format("15:04:05" + " " + string(bytes)))
+	return fmt.Print(time.Now().Format("15:04:05") + " " + string(bytes))
 }
 
 func main() {
@@ -19,10 +19,20 @@ func main() {
 	log.SetOutput(new(logWriter))
 
 	//basic.BasicHello()
-	//basic.BasicUser()
+	basic.BasicUser()
+	//basic.BasicUnmarshalAnyKnown()
+	//basic.BasicUnmarshalAnyNotKnown()
+	//basic.BasicUnmarshalAnyIs()
+	//basic.BasicOneof()
 	//basic.ProtoToJsonUser()
 	//basic.JsonToProtoUser()
 	//basic.BasicUserGroup()
-	jobsearch.JobSearchCandidate()
-	jobsearch.JobSearchSoftware()
+	//jobsearch.JobSearchCandidate()
+	//jobsearch.JobSearchSoftware()
+	//basic.WriteToFileSample()
+	//basic.ReadFromFileSample()
+	//basic.WriteToJSONSample()
+	//basic.ReadFromJSONSample()
+	basic.BasicWriteUserContentV1()
+	basic.BasicReadUserContentV1()
 }

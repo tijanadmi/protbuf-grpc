@@ -26,7 +26,15 @@ message User {
   Gender gender = 17;
   Address address = 18;
 
-  google.protobuf.Any communication_channel = 19 [json_name = "communication_channel"];
+  google.protobuf.Any communication_channel = 19 
+  [json_name = "communication_channel"];
+
+  oneof electronic_comm_channel {
+    SocialMedia social_media = 20 [json_name = "social_media"];
+    InstantMessaging instant_messaging = 21 [json_name = "instant_messaging"];
+  }
+
+  map<string, uint32> skill_rating = 22 [json_name = "skill_rating"];
 
 }
 
