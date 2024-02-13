@@ -11,9 +11,9 @@ func BasicWriteUserContentV1() {
 	uc := basic.UserContent{
 		UserContentId: 1001,
 		Slug:          "/this-is-v1",
-		Title:         "10 Strongest People In The World",
-		HtmlContent:   "<p>Just dummy content for 10 Strongest People In The World</p>",
-		AuthorId:      99,
+		//Title:         "10 Strongest People In The World",
+		//HtmlContent:   "<p>Just dummy content for 10 Strongest People In The World</p>",
+		//AuthorId:      99,
 	}
 	WriteProtoToFile(&uc, "user_content_v1.bin")
 }
@@ -31,14 +31,14 @@ func BasicReadUserContentV1() {
 	log.Println()
 }
 
-/*func BasicWriteUserContentV2() {
+func BasicWriteUserContentV2() {
 	uc := basic.UserContent{
 		UserContentId: 1002,
 		Slug:          "/this-is-v2",
-		// Title:         "10 Strongest People In The World Version 2",
-		// HtmlContent: "<p>Just dummy content for 10 Strongest People In The World Version 2</p>",
-		// AuthorId:      99,
-		// Category: "NEWS",
+		 //Title:         "10 Strongest People In The World Version 2",
+		 //HtmlContent: "<p>Just dummy content for 10 Strongest People In The World Version 2</p>",
+		 //AuthorId:      99,
+		 //Category: "NEWS",
 	}
 	WriteProtoToFile(&uc, "user_content_v2.bin")
 }
@@ -63,8 +63,8 @@ func BasicWriteUserContentV3() {
 		// Title:         "10 Strongest People In The World Version 3",
 		// HtmlContent: "<p>Just dummy content for 10 Strongest People In The World Version 3</p>",
 		// AuthorId:      99,
-		// Category: "NEWS",
-		// SubCategory: "PEOPLE",
+		 //Category: "NEWS",
+		 //SubCategory: "PEOPLE",
 	}
 	WriteProtoToFile(&uc, "user_content_v3.bin")
 }
@@ -87,11 +87,11 @@ func BasicWriteUserContentV4() {
 		UserContentId: 1004,
 		Slug:          "/this-is-v4",
 		// Title:         "10 Strongest People In The World Version 3",
-		// HtmlContent: "<p>Just dummy content for 10 Strongest People In The World Version 3</p>",
+		 //HtmlContent: "<p>Just dummy content for 10 Strongest People In The World Version 3</p>",
 		// AuthorId:      99,
 		// Category: "NEWS",
 		// SubCategory: "PEOPLE",
-		// Rating: 4,
+		 //Rating: 4,
 	}
 	WriteProtoToFile(&uc, "user_content_v4.bin")
 }
@@ -107,4 +107,4 @@ func BasicReadUserContentV4() {
 	ucJson, _ := protojson.Marshal(&uc)
 	log.Println(string(ucJson))
 	log.Println()
-}*/
+}

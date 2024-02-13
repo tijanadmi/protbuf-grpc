@@ -19,7 +19,7 @@ func main() {
 	log.SetOutput(new(logWriter))
 
 	//basic.BasicHello()
-	basic.BasicUser()
+	//basic.BasicUser()
 	//basic.BasicUnmarshalAnyKnown()
 	//basic.BasicUnmarshalAnyNotKnown()
 	//basic.BasicUnmarshalAnyIs()
@@ -33,6 +33,12 @@ func main() {
 	//basic.ReadFromFileSample()
 	//basic.WriteToJSONSample()
 	//basic.ReadFromJSONSample()
-	basic.BasicWriteUserContentV1()
-	basic.BasicReadUserContentV1()
+	//basic.BasicWriteUserContentV1()
+	//basic.BasicReadUserContentV1()
+	//basic.BasicWriteUserContentV2()
+	//basic.BasicReadUserContentV2()
+	//basic.BasicWriteUserContentV3()
+	//basic.BasicReadUserContentV3()
+	//basic.BasicWriteUserContentV4()
+	basic.BasicReadUserContentV4()
 }
